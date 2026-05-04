@@ -12,3 +12,5 @@ Este repositorio contiene las soluciones para la prueba diagnóstica de la asign
 ## Video de Defensa
 
 ### Enlace al Video en YouTube
+
+[Canal de YouTube](https://www.youtube.com/@rafaelkrodriguez4578)
