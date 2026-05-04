@@ -1,6 +1,6 @@
 # Prueba Diagnóstica - Lenguajes y Compiladores (UNEG)
 
-**Autor:** Rafaelk Rodríguez  
+**Autor:** Rafael Rodríguez  
 **Institución:** Universidad Nacional Experimental de Guayana (UNEG)  
 **Periodo Lectivo:** 2026-1  
 **Profesor:** Msc. Félix Márquez  
