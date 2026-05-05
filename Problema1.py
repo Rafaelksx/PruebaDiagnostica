@@ -20,8 +20,16 @@ def analizar_expresion(cadena):
     parentesis = 0
     error = False
 
+    # Procesamiento de la cadena utilizando el regex combinado, la función finditer nos permite iterar sobre
+    # cada coincidencia y clasificarla según el tipo de token identificado.
     for match in re.finditer(tokens_regex, cadena):
+
+        # Cada coincidencia se clasifica según el grupo que haya sido identificado por el regex,
+        # y se maneja el conteo de paréntesis para validar su balance.
         tipo = match.lastgroup
+
+        # El valor del token se extrae utilizando 
+        # el grupo correspondiente al tipo identificado.
         valor = match.group(tipo)
         
         if tipo == 'ESPACIO':
@@ -33,9 +41,15 @@ def analizar_expresion(cadena):
         
         resultado.append(f"{tipo} {valor}")
 
-    # Validación de balance de paréntesis [cite: 14]
+    # Validación de balance de paréntesis 
     balance = "PARÉNTESIS BALANCEADOS" if parentesis == 0 else "PARÉNTESIS NO BALANCEADOS"
     return " ".join(resultado) + f" {balance}"
 
-# Ejemplo de uso [cite: 12]
+# Ejemplo de uso 
+# La corrida en frío, para representar como funciona paso a paso es la siguiente:
+# 1. Se define la cadena "13-3*(4)".
+# 2. finditer encuentra al tipo NUMERO con valor "13", luego el OPERADOR "-", seguido por otro NUMERO "3", el OPERADOR "*",
+# el PAREN_IZQ "(", otro NUMERO "4" y finalmente el PAREN_DER ")".
+# 3. Se verifica el balance de paréntesis, que en este caso es correcto
+# 4. El resultado final es una cadena que clasifica cada token y confirma que los paréntesis están balanceados.
 print(analizar_expresion("13-3*(4)"))

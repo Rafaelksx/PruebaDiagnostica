@@ -20,5 +20,9 @@ def verificar_collatz(p, q):
     
     return "Demostrado para el intervalo."
 
-# Ejemplo de uso [cite: 20]
+# Ejemplo de uso 
+# Para probar paso a paso, primero se verifica que q >= 100p,
+# luego se itera desde p hasta q,
+# aplicando las reglas de la conjetura de Collatz para cada número y mostrando la secuencia resultante hasta llegar a 1.
+# Se duemuestra que la conjetura se cumple para todos los números en el intervalo.
 verificar_collatz(1, 100)

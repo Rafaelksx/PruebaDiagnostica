@@ -3,6 +3,7 @@ import re
 def analizar_fen(fen):
     # Definición de nombres para las secciones de FEN
     campos = ["Tablero", "Turno", "Enroque", "Peón al paso", "Medio movimiento", "Movimiento total"]
+    # split para separar los campos de la cadena FEN, se espera que haya exactamente 6 campos según el formato estándar.
     partes = fen.split()
     
     # 1. Validación inicial de estructura
@@ -62,4 +63,9 @@ def analizar_fen(fen):
 
 # Ejemplo de prueba (Posición inicial)
 test_fen = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+# Para probar paso a paso, primero tenemos que en la cadena Fen primero va el tablero, luego el turno,
+# después el enroque, el peón al paso, el medio movimiento y finalmente el movimiento total.
+# En este caso, el tablero es el estándar de inicio, el turno es para las blancas, el enroque está disponible para ambos lados,
+# no hay peón al paso, el medio movimiento es 0 y el movimiento total es 1.
+
 print(analizar_fen(test_fen))
