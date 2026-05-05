@@ -13,4 +13,4 @@ Este repositorio contiene las soluciones para la prueba diagnóstica de la asign
 
 ### Enlace al Video en YouTube
 
-[Canal de YouTube](https://www.youtube.com/@rafaelkrodriguez4578)
+[Canal de YouTube](https://youtu.be/MSqmahtH2wM)
